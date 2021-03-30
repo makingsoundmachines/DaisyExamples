@@ -1,8 +1,8 @@
 [submodule "libdaisy"]
 	path = libdaisy
-	url = https://github.com/electro-smith/libDaisy
+	url = https://github.com/makingsoundmachines/libDaisy
 	branch = master
 [submodule "DaisySP"]
 	path = DaisySP
-	url = https://github.com/electro-smith/DaisySP
+	url = https://github.com/makingsoundmachines/DaisySP
 	branch = master
