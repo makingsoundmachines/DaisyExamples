@@ -6,3 +6,7 @@
 	path = DaisySP
 	url = https://github.com/makingsoundmachines/DaisySP
 	branch = master
+[submodule "heart-of-gold"]
+	path = DaisySP
+	url = https://github.com/makingsoundmachines/heart-of-gold
+	branch = main
