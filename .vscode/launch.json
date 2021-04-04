@@ -1,0 +1,35 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [       
+        {
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceRoot}\\heart-of-gold\\_MSM_bela_trill\\build\\_MSM_bela_trill.elf",
+            "name": "JTAG DEBUGGING ",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "armToolchainPath": "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\9 2020-q2-update\\bin",
+            "interface": "swd",
+            "svdFile": "${workspaceRoot}\\heart-of-gold\\_MSM_bela_trill\\.vscode\\stm32H750x.svd",
+            "runToMain": true,
+            "configFiles": [
+                "interface\\stlink.cfg",
+                "target\\stm32h7x.cfg"
+            ],
+            "debuggerArgs": [
+                "-d",
+                "${workspaceRoot}\\heart-of-gold\\_MSM_bela_trill\\"
+              ],
+            "preRestartCommands": [
+                "load",
+                "enable breakpoint",
+                "monitor reset"
+            ],
+            "showDevDebugOutput": true,
+          
+       }
+    ]
+}
