@@ -3,3 +3,4 @@
 ./ci/build_libs.sh
 
 echo "finished"
+cmd /k
