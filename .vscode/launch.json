@@ -6,14 +6,14 @@
     "configurations": [       
         {
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceRoot}\\heart-of-gold\\_MSM_bela_trill\\build\\_MSM_bela_trill.elf",
+            "executable": "${workspaceRoot}\\heart-of-gold\\_MSM_moogladder\\build\\ex_moogladder.elf",
             "name": "JTAG DEBUGGING ",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
             "armToolchainPath": "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\9 2020-q2-update\\bin",
             "interface": "swd",
-            "svdFile": "${workspaceRoot}\\heart-of-gold\\_MSM_bela_trill\\.vscode\\stm32H750x.svd",
+            "svdFile": "${workspaceRoot}\\heart-of-gold\\_MSM_moogladder\\.vscode\\stm32H750x.svd",
             "runToMain": true,
             "configFiles": [
                 "interface\\stlink.cfg",
@@ -21,7 +21,7 @@
             ],
             "debuggerArgs": [
                 "-d",
-                "${workspaceRoot}\\heart-of-gold\\_MSM_bela_trill\\"
+                "${workspaceRoot}\\heart-of-gold\\_MSM_moogladder\\"
               ],
             "preRestartCommands": [
                 "load",
