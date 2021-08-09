@@ -6,14 +6,14 @@
     "configurations": [       
         {
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceRoot}\\heart-of-gold\\_MSM_led_matrix_dma\\build\\_MSM_led_matrix_dma.elf",
+            "executable": "${workspaceRoot}\\heart-of-gold\\_MSM_stolperbeats\\build\\_MSM_stolperbeats.elf",
             "name": "JTAG DEBUGGING ",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
             "armToolchainPath": "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\9 2020-q2-update\\bin",
             "interface": "swd",
-            "svdFile": "${workspaceRoot}\\heart-of-gold\\_MSM_led_matrix_dma\\.vscode\\stm32H750x.svd",
+            "svdFile": "${workspaceRoot}\\heart-of-gold\\_MSM_stolperbeats\\.vscode\\stm32H750x.svd",
             "runToMain": true,
             "configFiles": [
                 "interface\\stlink.cfg",
@@ -21,7 +21,7 @@
             ],
             "debuggerArgs": [
                 "-d",
-                "${workspaceRoot}\\heart-of-gold\\_MSM_led_matrix_dma\\"
+                "${workspaceRoot}\\heart-of-gold\\_MSM_stolperbeats\\"
               ],
             "preRestartCommands": [
                 "load",
