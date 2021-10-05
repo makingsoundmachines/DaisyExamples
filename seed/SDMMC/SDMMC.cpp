@@ -20,6 +20,7 @@
 //
 // The SD card is currently configured to run with 4-bits and a 12MHz clock frequency.
 //
+// Opt into fatfs inside the makefile. USE_FATFS = 1 
 #include <stdio.h>
 #include <string.h>
 #include "daisy_seed.h"
