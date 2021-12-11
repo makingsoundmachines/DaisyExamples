@@ -5,9 +5,10 @@ using namespace daisy;
 using namespace patch_sm;
 using namespace daisysp;
 
-DaisyPatchSM hw;
-Switch       button, toggle;
-FIL          file; /**< Can't be made on the stack (DTCMRAM) */
+DaisyPatchSM   hw;
+Switch         button, toggle;
+FIL            file; /**< Can't be made on the stack (DTCMRAM) */
+FatFSInterface fsi;
 
 void AudioCallback(AudioHandle::InputBuffer  in,
                    AudioHandle::OutputBuffer out,
@@ -40,13 +41,15 @@ int main(void)
     SdmmcHandler         sdcard;
     sd_config.Defaults();
     sdcard.Init(sd_config);
-    dsy_fatfs_init();
+
+    fsi.Init(FatFSInterface::Config::MEDIA_SD);
+
 
     /** Write/Read text file */
     const char *test_string = "Testing Daisy Patch SM";
     const char *test_fname  = "DaisyPatchSM-Test.txt";
     FRESULT     fres = FR_DENIED; /**< Unlikely to actually experience this */
-    if(f_mount(&SDFatFS, "/", 0) == FR_OK)
+    if(f_mount(&fsi.GetSDFileSystem(), "/", 0) == FR_OK)
     {
         /** Write Test */
         if(f_open(&file, test_fname, (FA_CREATE_ALWAYS | FA_WRITE)) == FR_OK)
@@ -96,7 +99,7 @@ int main(void)
         // 500Hz samplerate for DAC output test
         if(now - dact > 2)
         {
-            hw.WriteCvOut(DaisyPatchSM::CV_OUT_BOTH, dacphs.Process() * 5.f);
+            hw.WriteCvOut(CV_OUT_BOTH, dacphs.Process() * 5.f);
             dact = now;
         }
 

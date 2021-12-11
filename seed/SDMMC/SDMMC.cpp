@@ -32,7 +32,9 @@ using namespace daisy;
 
 static DaisySeed hw;
 
-SdmmcHandler sd;
+SdmmcHandler   sd;
+FatFSInterface fsi;
+FIL            SDFile;
 
 int main(void)
 {
@@ -54,10 +56,10 @@ int main(void)
     sd.Init(sd_cfg);
 
     // Links libdaisy i/o to fatfs driver.
-    dsy_fatfs_init();
+    fsi.Init(FatFSInterface::Config::MEDIA_SD);
 
     // Mount SD Card
-    f_mount(&SDFatFS, SDPath, 1);
+    f_mount(&fsi.GetSDFileSystem(), "/", 1);
 
     // Open and write the test file to the SD Card.
     if(f_open(&SDFile, TEST_FILE_NAME, (FA_CREATE_ALWAYS) | (FA_WRITE))

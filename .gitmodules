@@ -10,3 +10,6 @@
 	path = heart-of-gold
 	url = https://github.com/makingsoundmachines/heart-of-gold
 	branch = main
+[submodule "stmlib"]
+	path = stmlib
+	url = https://github.com/pichenettes/stmlib
