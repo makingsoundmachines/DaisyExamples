@@ -6,14 +6,14 @@
     "configurations": [       
         {
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceRoot}\\heart-of-gold\\_MSM_test_Stolperbeats_hw_rev3\\build\\_MSM_test_Stolperbeats_hw_rev3.elf",
+            "executable": "${workspaceRoot}\\heart-of-gold\\_MSM_stolperbeats_hw_rev4\\build\\_MSM_stolperbeats_hw_rev4.elf",
             "name": "JTAG DEBUGGING ",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
             "armToolchainPath": "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\9 2020-q2-update\\bin",
             "interface": "swd",
-            "svdFile": "${workspaceRoot}\\heart-of-gold\\_MSM_test_Stolperbeats_hw_rev3\\.vscode\\stm32H750x.svd",
+            "svdFile": "${workspaceRoot}\\heart-of-gold\\_MSM_stolperbeats_hw_rev4\\.vscode\\stm32H750x.svd",
             "runToMain": true,
             "configFiles": [
                 "interface\\stlink.cfg",
@@ -21,7 +21,7 @@
             ],
             "debuggerArgs": [
                 "-d",
-                "${workspaceRoot}\\heart-of-gold\\_MSM_test_Stolperbeats_hw_rev3\\"
+                "${workspaceRoot}\\heart-of-gold\\_MSM_stolperbeats_hw_rev4\\"
               ],
             "preRestartCommands": [
                 "load",
