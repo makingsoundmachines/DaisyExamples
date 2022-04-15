@@ -6,14 +6,14 @@
     "configurations": [       
         {
             "cwd": "${workspaceFolder}",
-            "executable": "${workspaceRoot}\\heart-of-gold\\_MSM_atone_Percussive\\build\\_MSM_atone_Percussive.elf",
+            "executable": "${workspaceRoot}\\heart-of-gold\\_MSM_test_Percussive\\build\\_MSM_test_Percussive.elf",
             "name": "JTAG DEBUGGING ",
             "request": "launch",
             "type": "cortex-debug",
             "servertype": "openocd",
             "armToolchainPath": "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\9 2020-q2-update\\bin",
             "interface": "swd",
-            "svdFile": "${workspaceRoot}\\heart-of-gold\\_MSM_atone_Percussive\\.vscode\\stm32H750x.svd",
+            "svdFile": "${workspaceRoot}\\heart-of-gold\\_MSM_test_Percussive\\.vscode\\stm32H750x.svd",
             "runToMain": true,
             "configFiles": [
                 "interface\\stlink.cfg",
@@ -21,7 +21,7 @@
             ],
             "debuggerArgs": [
                 "-d",
-                "${workspaceRoot}\\heart-of-gold\\_MSM_atone_Percussive\\"
+                "${workspaceRoot}\\heart-of-gold\\_MSM_test_Percussive\\"
               ],
             "preRestartCommands": [
                 "load",
