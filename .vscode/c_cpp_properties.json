@@ -25,7 +25,8 @@
                 "${workspaceFolder}/DaisySP/modules",
                 "${workspaceFolder}/DaisySP/Source",
                 "${workspaceFolder}/DaisySP/tests/util",
-                "${workspaceFolder}/stmlib"
+                "${workspaceFolder}/stmlib",
+                "${workspaceFolder}/heart-of-gold/_MSM_808_Drums_Percussive"
             ],
             "defines": [
                 "CORE_CM7",
